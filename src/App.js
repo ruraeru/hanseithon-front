@@ -2,15 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import backImg from './images/background1.png';
 import backImg2 from './images/background3.png';
+import Clock from './clock';
+
 
 const Back = styled.div`
   background-image: url(${props => props.img});
-`
+`;
 
 
 const FstBox = styled.div`
   width: auto;
-  height: 655px;
+  height: auto;
   padding: 154px 305px 311px;
   background-color: ${props => props.background || ""};
   text-decoration: none;
@@ -65,13 +67,9 @@ const CountDown = styled(Text)`
   /* top: -80px; */
 `;
 
-<video tabindex="-1" class="video-stream html5-main-video" controlslist="nodownload" 
-src="blob:https://www.youtube.com/e02101db-0e57-4329-8cb4-0c2d1c61f3f8" 
-style="width: 974px; height: 548px; left: 0px; top: 0px;" loop=""></video>
-
 function App() {
   return (
-    <>
+    <div>
     <Back img={backImg}>
     <FstBox background="#262626">
       <Text size="92px" height="217px" line="125px" color="#d15941" top="-130px">
@@ -94,10 +92,11 @@ function App() {
       <Text>
         No sweat, no sweet
       </Text>
+      <Clock />
     </FstBox>
     </Back>
-    </>
+    </div>
   );
 }
 
-export default App;
+export default App
