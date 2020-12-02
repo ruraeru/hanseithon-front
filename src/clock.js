@@ -2,20 +2,14 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
 const Clock1 = (props) => {
-  useEffect(() => {
-    const apiCall = async () => {
-      const response = await axios.get(`http://chunwol.xyz:8000/timer/endtime`);
-      console.log(response.data);
-    };
-    apiCall();
-  }, [])
+  // const APIHOST = "http://chunwol.xyz:8000/timer/endtime";
 
-  let time = new Date().toLocaleTimeString('it-IT');
+  let time = new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit', second:'2-digit'});
 
   const [ctime, setCtime] = useState(time);
 
   const UpdateTime = () => {
-    time = new Date().toLocaleTimeString('it-IT');
+    time = new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit', second:'2-digit'});
     setCtime(time);
   };
 

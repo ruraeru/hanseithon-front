@@ -11,13 +11,13 @@ const Back = styled.div`
 `;
 
 
-const FstBox = styled.div`
+const Box = styled.div`
   width: auto;
   height: auto;
-  padding: 154px 305px 311px;
-  /* background-color: ${props => props.background || ""}; */
+  padding: 154px 305px ${props => props.img || "15px"};
+  background-color: ${props => props.background || "rgba(0, 0, 0, 0.8)"};
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: rgba(0, 0, 0, 0.8); */
 `;
 
 const Could = styled.div`
@@ -43,7 +43,7 @@ const Text = styled.text`
   
   display: flex;
   justify-content: center;
-  text-align: center;
+  text-align: ${props => props.align || "center"};
   position: relative;
 `;
 
@@ -63,7 +63,6 @@ const CountDown = styled(Text)`
   font-family: "KoreanJMDBR";
   src: url("./fonts/KoreanJMDBR.ttf") format("ttf");
   width: 100%;
-  height: 200px;
   text-shadow: 3px 3px 20px rgba(255, 0, 104, 0.79);
   font-size: 97px;
   color: #f44e92;
@@ -73,8 +72,8 @@ const CountDown = styled(Text)`
   align-items: center;
   line-height: 97px;
   /* text-align: center; */
-  position: relative;
-  top: -80px;
+  /* position: relative; */
+  /* top: -140px; */
 `;
 
 const Time = styled.text`
@@ -85,6 +84,7 @@ const Time = styled.text`
   color: #ffffff;
   display: flex;
   justify-content: center;
+  text-align: center;
   position: relative;
   left: -5rem;
 `;
@@ -102,42 +102,79 @@ const TimeText = styled.text`
   margin-right: 2rem;
 `;
 
+const TimeTable = styled(Text)`
+  border-top: 
+`;
+
 function App() {
   return (
     <div>
-    <Back img={backImg}>
-    <FstBox background="#262626">
-      <Text size="92px" height="217px" line="125px" color="#d15941" top="-130px">
-        Welcome <br /> To Hanseithon
+      <Back img={backImg}>
+        <Box>
+          <Text size="92px" height="217px" line="125px" color="#d15941" top="-130px">
+            Welcome <br /> To Hanseithon
       </Text>
-      <Text size="92px" height="0" line="125px" top="-347px" left="10px">
-        Welcome <br /> To Hanseithon
+          <Text size="92px" height="0" line="125px" top="-347px" left="10px">
+            Welcome <br /> To Hanseithon
       </Text>
-      <Text top="-60px">
-        ㅡ The Third Session of 2020 ㅡ
+          <Text top="-60px">
+            ㅡ The Third Session of 2020 ㅡ
       </Text>
-      <Iframe src="https://www.youtube-nocookie.com/embed/RYR6LeEK1hU?autoplay=1&mute=1" frameBorder="0" controlslist="nodownload" loop="1" allowFullScreen/>
-    </FstBox>
-    </Back>
-    <Back img={backImg2}>
-    <FstBox background="#262626">
-      <CountDown>
-        Count Down
-      </CountDown>
-      <Text>
-        No sweat, no sweet
-      </Text>
-      {/* <Countdown seconds={86400} color="#f44e92" alpha={2} size={300} font="KoreanJMDBR" /> */}
-      <Time>
-        <TimeText>현재시간</TimeText>
-        <Clock />
-      </Time>
-      <Time>
-        <TimeText>남은시간</TimeText>
-        <Clock />
-      </Time>
-    </FstBox>
-    </Back>
+          <Iframe src="https://www.youtube-nocookie.com/embed/RYR6LeEK1hU?autoplay=1&mute=1" frameBorder="0" controlslist="nodownload" loop="1" allowFullScreen />
+        </Box>
+      </Back>
+      <Back img={backImg2}>
+        <Box>
+          <CountDown>
+            Count Down
+          </CountDown>
+          <Text line="165px">
+            No sweat, no sweet
+          </Text>
+          {/* <Countdown seconds={86400} color="#f44e92" alpha={2} size={300} font="KoreanJMDBR" /> */}
+          <Time>
+            <TimeText>현재시간</TimeText>
+            <Clock />
+          </Time>
+          <Time>
+            <TimeText>남은시간</TimeText>
+            <Clock />
+          </Time>
+        </Box>
+      </Back>
+      <Back img={backImg}>
+        <Box background="rgba(54, 64, 94, 0.8)">
+          <Text size="97px" line="132px" height="200px">
+            Time table
+          </Text>
+          <Text height="100px" size="67px">
+            12월 11일(금) <br />
+          </Text>
+          <Text align="left">
+            17:30 ~ 18:00 | 키노트 <br />
+            18:00 ~ 20:00 | 자율 개발 <br />
+            20:00 ~ 21:00 | 저녁 식사 및 멘토단 오리엔테이션 <br />
+            21:00 ~ 21:30 | 이벤트 타임 <br />
+            17:30 ~ 18:00 | 자율 개발 및 멘토링 <br />
+          </Text>
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          <Text height="100px" size="67px">
+            12월 12일(토) <br />
+          </Text>
+          <Text align="left">
+            24:00 ~ 08:00 | 자율 개발 <br />
+            08:00 ~ 09:00 | 아침 식사 <br />
+            09:00 ~ 09:30 | 이벤트 타임 <br />
+            09:30 ~ 12:30 | 자율 개발 및 멘토링 <br />
+            12:30 ~ 13:30 | 점심 식사<br />
+            13:30 ~ 14:00 | 이벤트 타임<br />
+            14:00 ~ 15:00 | 파일 제출 및 발표 준비<br />
+            15:00 ~ 18:00 | 발표 및 심사<br />
+            18:00 ~ 18:30 | 시상<br />
+          </Text>
+          <Box /><Box /><Box /><Box /><Box /><Box /><Box /><Box /><Box />
+        </Box>
+      </Back>
     </div>
   );
 }
