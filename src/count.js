@@ -1,33 +1,60 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import "./App.css";
 
-function countdown() {
-    const daysEl = document.getElementById("days");
-    const hoursEl = document.getElementById("hours");
-    const minsEl = document.getElementById("mins");
-    const secondsEl = document.getElementById("seconds");
+const Count = '6 Dec 2020';
 
-    const count = "4 Dec 2020";
+function Counter() {
+  const calculateTimeLeft = () => {
+    let year = new Date().getFullYear();
+    const CountDate = new Date(Count);
+    // const difference = +new Date(`${year}-10-1`) - +new Date();
+    const difference = new Date();
 
-    const newcount = new Date(count);
-    const currentDate = new Date();
+    const totalSeconds = (CountDate - difference) / 1000;
 
-    const totalSeconds = (newcount - currentDate) / 1000;
+    let timeLeft = {};
 
-    const days = Math.floor(totalSeconds / 3600 / 24);
-    const hours = Math.floor(totalSeconds / 3600) % 24;
-    const mins = Math.floor(totalSeconds / 60) % 60;
-    const seconds = Math.floor(totalSeconds) % 60;
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(totalSeconds / 3600 / 24),
+        hours: Math.floor(totalSeconds / 3600) % 24,
+        minutes: Math.floor(totalSeconds / 60) % 60,
+        seconds: Math.floor(totalSeconds) % 60,
+      };
+    }
 
-    daysEl.innerHTML = days;
-    hoursEl.innerHTML = formatTime(hours);
-    minsEl.innerHTML = formatTime(mins);
-    secondsEl.innerHTML = formatTime(seconds);
-    function formatTime(time) {
-        return time < 10 ? `0${time}` : time;
-      }
-      setInterval(countdown, 1000);
+    return timeLeft;
+  };
 
-    return(
-        
-    )
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [year] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+  });
+
+  const timerComponents = [];
+
+  Object.keys(timeLeft).forEach((interval) => {
+    if (!timeLeft[interval]) {
+      return;
+    }
+
+    timerComponents.push(
+      <span>
+        {timeLeft[interval]} {interval}{""}
+      </span>
+    );
+  });
+  return (
+    <div>
+      {/* <h1>HacktoberFest {year} Countdown</h1>
+      <h2>With React Hooks!</h2> */}
+      {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+    </div>
+  );
 }
+
+export default Counter;

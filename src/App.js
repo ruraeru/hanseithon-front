@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import backImg from './images/background1.png';
 import backImg2 from './images/background3.png';
 import Clock from './clock';
+import Count from './count';
 
 
 const Back = styled.div`
@@ -141,7 +142,7 @@ function App() {
           </Time>
           <Time>
             <TimeText>남은시간</TimeText>
-            <Clock />
+            <Count />
           </Time>
         </Box>
       </Back>
