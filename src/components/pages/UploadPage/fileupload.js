@@ -20,7 +20,7 @@ function FileUpload() {
         const formData = new FormData();
         formData.append('file', file); // appending file
         // axios.post('http://chunwol.xyz:8000/upload', formData, {
-        axios.post('40.82.136.60:3000/upload', formData, {
+        axios.post('http://40.82.136.60:3000/upload', formData, {
             onUploadProgress: (ProgressEvent) => {
                 let progress = Math.round(
                     ProgressEvent.loaded / ProgressEvent.total * 100) + '%';

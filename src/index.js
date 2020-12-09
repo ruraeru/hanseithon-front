@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-require('dotenv').config();
-const host = process.env.REACT_APP_API_HOST;
+// require('dotenv').config();
+// const host = process.env.REACT_APP_API_HOST;
 
-console.log(host);
+// console.log(host);
 
 ReactDOM.render(
   <React.StrictMode>

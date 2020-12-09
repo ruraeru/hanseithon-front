@@ -3,18 +3,18 @@ body {
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
   /* background: url("https://previews.dropbox.com/p/thumb/AA-DEfgLgKqK_J-N7qyQsSU3zXC0EQH1r0W-BZglFGJpN0EFCIi_ZAiTUmwh8xsLcxRUg-GBouQXKvNYH4XLyi9s1o6svbd69aDxaEYsViOWev9hU9ebAo0mH0CUY-C1o88QxEbt8VhZD8Tp-B48z2hy3bZVkx9kt6m8ipAii8rHQCq3u7G1kirHTdDxOquWwmwNk5bPnd_flqsIu3h_t07zfS1o5UEV5wcLMOdRKIRagEPcGzlVeONZXyJ7GcxZTgnEm-ObDUy5XfW2TtA_IlTCY3fL2auQ4HtRQzI6BwoaipcaUquK44AtzKkqWx5eZ5eEDJMTjslUF7qVDFqpFZUl7oVgW3TTJobnzEB3QvoQ3iSy915yuketbQv15BOA_sY/p.png?fv_content=true&size_mode=5"); */
   /* background: url("https://previews.dropbox.com/p/thumb/AA_i7xSS9XAXEsw3ynd3z4Nzy6shhgR6oGcJr7ICabp7fA3I6hS5M6hnUb8yedzuozgQmE0v8XpuI6bwVqCvXDR9Z0GHKRxhizyVc31mDKhUoEayINMSwnD4kjUo5vGWGJCOOCv1KSLev3XoLayyijPYQZAPaTWgfVxo-fXCyQAqd3r0r2zYxgk_9CxMyKs3C-BfdDArx8icSeMYDOZLqawn4SVref6KGs1fQHFUE0Ywldxl2LIZkorme47SBKkHgkdPuFP48K7TsbobPwogj-iC19cCbj2MagY4UjlTViOm9dlH2itcoZQfIMGlEceXA90DsiUUuKUHAJgI2MHGgfSLN7RlHlQeZeaiL3Cf9SiXtQ/p.png?fv_content=true&size_mode=5"); */
   /* background: url("./images/background1.png") */
   /* background: url("./images/background3.png"); */
 }
-
+/* 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 
 @font-face {
   font-family: KoreanJMDBR;
