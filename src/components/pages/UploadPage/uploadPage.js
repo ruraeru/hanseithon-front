@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import backImg from '../../../images/background1.png';
 import Upload from './fileupload';
+import Modal from '../../Modal';
 
 const Box = styled.div`
   width: auto;
@@ -37,20 +38,20 @@ const Text = styled.text`
   /* position: ${props => props.position || "relative"}; */
 `;
 
-const Span = styled.span`
-  
-`
-
 function FileUpload() {
   return (
     <>
       <Back img={backImg}>
         <Box background="rgba(255, 255, 255, 0.8)">
-          <Text size="97px" color="#262626" line="100px">
+          <Text size="97px" color="#262626" line="97px">
             file
           </Text>
-          <br /><br /><br /><br /><br />
-          <Upload />
+          <br /><br /><br /><br /><br /><br /><br /><br /><br />
+          <br /><br /><br /><br /><br /><br /><br /><br /><br />
+          <Text>
+            <Modal />
+          </Text>
+          {/* <Upload /> */}
         </Box>
       </Back>
     </>

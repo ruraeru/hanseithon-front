@@ -5,6 +5,8 @@ import Count from './components/pages/CountPage/count';
 import MainPage from './components/pages/MainPage/mainPage';
 import TimeTable from './components/pages/TimeTablePage/timetable';
 import Upload from './components/pages/UploadPage/uploadPage';
+import Modal from './components/Modal';
+import Test from './components/pages/UploadPage/fileupload';
 
 
 

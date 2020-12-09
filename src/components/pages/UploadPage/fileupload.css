@@ -10,23 +10,24 @@ object-fit: contain;
 }
 
 .progessBar{
-height: 1rem;
+height: 2rem;
 width: 0%;
 background-color: rgba(255, 0, 104, 0.79);
-color: white;
-padding:2px
+color: #262626;
+padding:2px;
 }
 
 .file-upload{
 
-box-shadow: 2px 2px 2px 2px #ccc;
+/* box-shadow: 2px 2px 2px 2px #ccc; */
 padding: 2rem;
 display: flex;
 flex-direction: column;
 
 justify-content: space-between;
-font-size: 1rem;
+/* font-size: 1rem; */
 background-color: white;
+color: #262626;
 }
 
 /* input , div , button{
@@ -40,8 +41,18 @@ background-color: white;
  color: #ffffff;
  font-size: 1rem;
  cursor: pointer;
+ border: none;
 }
 
 * {
-  font-family: "KoreanJMDBR";
+  /* font-family: "KoreanJMDBR"; */
+}
+
+p {
+  font-size: 26px;
+  display: inline-block;
+}
+
+.color-red {
+  color: rgba(255, 0, 104, 0.79);
 }
