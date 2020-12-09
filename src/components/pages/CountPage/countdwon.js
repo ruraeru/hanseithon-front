@@ -10,8 +10,6 @@ const Time = styled.text`
   font-size: 154px;
   line-height: 154px;
   color: #ffffff;
-  /* position: relative; */
-  /* left: -5rem; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +25,6 @@ const TimeText = styled.text`
   display: flex;
   justify-content: center;
   text-shadow: none;
-  /* margin-right: 2rem; */
 `;
 
 const Box = styled.div`
@@ -36,7 +33,6 @@ const Box = styled.div`
   padding: 154px 305px ${props => props.img || "15px"};
   background-color: ${props => props.background || "rgba(0, 0, 0, 0.8)"};
   text-decoration: none;
-  /* background-color: rgba(0, 0, 0, 0.8); */
   display: ${props => props.display};
 `;
 
@@ -68,14 +64,10 @@ const CountDownText = styled(Text)`
   text-shadow: 3px 3px 20px rgba(255, 0, 104, 0.79);
   font-size: 97px;
   color: #f44e92;
-  /* margin: 0 auto; */
   display: flex;
   justify-content: center;
   align-items: center;
   line-height: 97px;
-  /* text-align: center; */
-  /* position: relative; */
-  /* top: -140px; */
 `;
 
 const Back = styled.div`
@@ -94,10 +86,6 @@ function CountDown() {
           <Text line="165px">
             No sweat, no sweet
           </Text>
-          {/* <Time>
-            <TimeText>현재시간</TimeText>
-            <Clock />
-          </Time> */}
           <Time>
             <TimeText>남은시간</TimeText>
             <Count />

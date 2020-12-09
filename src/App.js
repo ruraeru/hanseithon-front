@@ -5,8 +5,6 @@ import Count from './components/pages/CountPage/count';
 import MainPage from './components/pages/MainPage/mainPage';
 import TimeTable from './components/pages/TimeTablePage/timetable';
 import Upload from './components/pages/UploadPage/uploadPage';
-import Modal from './components/Modal';
-import Test from './components/pages/UploadPage/fileupload';
 
 
 
@@ -22,7 +20,6 @@ const Box = styled.div`
   padding: 154px 305px ${props => props.img || "15px"};
   background-color: ${props => props.background || "rgba(0, 0, 0, 0.8)"};
   text-decoration: none;
-  /* background-color: rgba(0, 0, 0, 0.8); */
   display: ${props => props.display};
 `;
 
@@ -54,13 +51,8 @@ const CountDownText = styled(Text)`
   text-shadow: 3px 3px 20px rgba(255, 0, 104, 0.79);
   font-size: 97px;
   color: #f44e92;
-  /* margin: 0 auto; */
   display: flex;
-  /* justify-content: center; */
   align-items: center;
-  /* text-align: center; */
-  /* position: relative; */
-  /* top: -140px; */
   line-height: 132px;
 `;
 
@@ -72,24 +64,10 @@ const Time = styled.text`
   font-size: 154px;
   line-height: 154px;
   color: #ffffff;
-  /* position: relative; */
-  /* left: -5rem; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
-
-const TimeText = styled.text`
-  width: 100%;
-  font-family: "KoreanJMDBR";
-  font-size: 60px;
-  line-height: 120px;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  text-shadow: none;
-  /* margin-right: 2rem; */
 `;
 
 function App() {
@@ -104,12 +82,7 @@ function App() {
           <Text line="160px" size="29px">
             No sweat, no sweet
           </Text>
-          {/* <Time>
-            <TimeText>현재시간</TimeText>
-            <Clock />
-          </Time> */}
           <Time>
-            {/* <TimeText>남은시간</TimeText> */}
             <Count />
           </Time>
         </Box>

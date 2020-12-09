@@ -4,9 +4,7 @@ const Count = 'Dec 12, 2020 18:30:01';
 
 function Counter() {
   const calculateTimeLeft = () => {
-    // let year = new Date().getFullYear();
     const CountDate = new Date(Count);
-    // const difference = +new Date(`${year}-10-1`) - +new Date();
     const difference = new Date();
 
     const totalSeconds = (CountDate - difference) / 1000;
@@ -26,7 +24,6 @@ function Counter() {
   };
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-  // const [year] = useState(new Date().getFullYear());
 
   useEffect(() => {
     setTimeout(() => {
@@ -49,8 +46,6 @@ function Counter() {
   });
   return (
     <div>
-      {/* <h1>HacktoberFest {year} Countdown</h1>
-      <h2>With React Hooks!</h2> */}
       {timerComponents.length ? timerComponents : <span>Time's up!</span>}
     </div>
   );

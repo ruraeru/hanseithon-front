@@ -35,7 +35,6 @@ const Text = styled.text`
   display: flex;
   justify-content: center;
   text-align: ${props => props.align || "center"};
-  /* position: ${props => props.position || "relative"}; */
 `;
 
 function FileUpload() {
@@ -51,7 +50,6 @@ function FileUpload() {
           <Text>
             <Modal />
           </Text>
-          {/* <Upload /> */}
         </Box>
       </Back>
     </>
