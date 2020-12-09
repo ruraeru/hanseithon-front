@@ -1,6 +1,6 @@
 .App {
-  margin: 2rem auto;
-  max-width: 800px;
+  /* margin: 2rem auto;
+  max-width: 800px; */
 }
 
 img{
@@ -12,7 +12,7 @@ object-fit: contain;
 .progessBar{
 height: 1rem;
 width: 0%;
-background-color: rgb(68, 212, 231);
+background-color: rgba(255, 0, 104, 0.79);
 color: white;
 padding:2px
 }
@@ -26,6 +26,7 @@ flex-direction: column;
 
 justify-content: space-between;
 font-size: 1rem;
+background-color: white;
 }
 
 /* input , div , button{
@@ -35,8 +36,12 @@ font-size: 1rem;
 .upbutton{
  width: 5rem;
  padding: .5rem;
- background-color: #2767e9;
- color: aliceblue;
+ background-color: #262626;
+ color: #ffffff;
  font-size: 1rem;
  cursor: pointer;
+}
+
+* {
+  font-family: "KoreanJMDBR";
 }

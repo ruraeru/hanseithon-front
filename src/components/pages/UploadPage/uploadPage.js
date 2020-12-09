@@ -19,7 +19,6 @@ const Back = styled.div`
 
 const Text = styled.text`
   font-family: "KoreanJMDBR";
-  src: url("./fonts/KoreanJMDBR.ttf") format("ttf");
   font-size: ${props => props.size || "25px"};
 
   color: black;
@@ -35,22 +34,27 @@ const Text = styled.text`
   display: flex;
   justify-content: center;
   text-align: ${props => props.align || "center"};
-  position: ${props => props.position || "relative"};
+  /* position: ${props => props.position || "relative"}; */
 `;
 
+const Span = styled.span`
+  
+`
+
 function FileUpload() {
-    return (
-        <>
-        <Back img={backImg}>
+  return (
+    <>
+      <Back img={backImg}>
         <Box background="rgba(255, 255, 255, 0.8)">
-          <Text size="97px" color="#262626">
+          <Text size="97px" color="#262626" line="100px">
             file
           </Text>
+          <br /><br /><br /><br /><br />
           <Upload />
         </Box>
       </Back>
-        </>
-    )
+    </>
+  )
 }
 
 export default FileUpload;

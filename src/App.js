@@ -45,17 +45,6 @@ const Text = styled.text`
   position: ${props => props.position || "relative"};
 `;
 
-const Iframe = styled.iframe`
-  /* width: 700px; */
-  width: 100%;
-  height: 525px;
-  /* display: block; */
-  /* margin: 0 auto; */
-  /* position: relative; */
-  display: flex;
-  justify-content: center;
-`;
-
 const CountDownText = styled(Text)`
   font-family: "KoreanJMDBR";
   src: url("./fonts/KoreanJMDBR.ttf") format("ttf");
@@ -65,16 +54,17 @@ const CountDownText = styled(Text)`
   color: #f44e92;
   /* margin: 0 auto; */
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  line-height: 97px;
   /* text-align: center; */
   /* position: relative; */
   /* top: -140px; */
+  line-height: 132px;
 `;
 
 const Time = styled.text`
   width: 100%;
+  height: 100%;
   text-shadow: 3px 3px 20px rgba(255, 255, 255, 0.8);
   font-family:"KoreanJMDBR";
   font-size: 154px;
@@ -91,8 +81,8 @@ const Time = styled.text`
 const TimeText = styled.text`
   width: 100%;
   font-family: "KoreanJMDBR";
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 60px;
+  line-height: 120px;
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -109,7 +99,7 @@ function App() {
           <CountDownText>
             Count Down
           </CountDownText>
-          <Text line="165px">
+          <Text line="160px" size="29px">
             No sweat, no sweet
           </Text>
           {/* <Time>
@@ -117,13 +107,13 @@ function App() {
             <Clock />
           </Time> */}
           <Time>
-            <TimeText>남은시간</TimeText>
+            {/* <TimeText>남은시간</TimeText> */}
             <Count />
           </Time>
         </Box>
       </Back>
-     <TimeTable />
-     <Upload />
+      <TimeTable />
+      <Upload />
     </>
   );
 }

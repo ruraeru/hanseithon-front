@@ -45,9 +45,9 @@ const Iframe = styled.iframe`
 `;
 
 function MainPage() {
-    return(
-        <>
-        <Back img={backImg}>
+  return (
+    <>
+      <Back img={backImg}>
         <Box>
           <Text size="92px" height="217px" line="125px" color="#d15941" top="-130px">
             Welcome <br /> To Hanseithon
@@ -58,11 +58,11 @@ function MainPage() {
           <Text top="-60px">
             ㅡ The Third Session of 2020 ㅡ
       </Text>
-          <Iframe src="https://www.youtube.com/embed/RYR6LeEK1hU?autoplay=1&mute=1" frameBorder="0" controlslist="nodownload" loop="1" allowFullScreen />
+          <Iframe src="https://www.youtube-nocookie.com/embed/RYR6LeEK1hU?autoplay=1&mute=1" frameBorder="0" controlslist="nodownload" loop="1" allowFullScreen />
         </Box>
       </Back>
-      </>
-    )
+    </>
+  )
 }
 
 export default MainPage;

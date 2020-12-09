@@ -84,13 +84,13 @@ const Back = styled.div`
 `;
 
 function CountDown() {
-    return (
-        <>
-            <Back img={backImg2}>
+  return (
+    <>
+      <Back img={backImg2}>
         <Box>
-          <CountDown>
+          <CountDownText>
             Count Down
-          </CountDown>
+          </CountDownText>
           <Text line="165px">
             No sweat, no sweet
           </Text>
@@ -104,8 +104,8 @@ function CountDown() {
           </Time>
         </Box>
       </Back>
-        </>
-    )
+    </>
+  )
 }
 
 export default CountDown;
