@@ -12,7 +12,7 @@ function FileUpload() {
     const handleChange = (e) => {
         setProgess(0)
         const file = e.target.files[0]; // accessing file
-        // console.log(file);
+        console.log(file);
         setFile(file); // storing file
     }
 
@@ -34,9 +34,14 @@ function FileUpload() {
                 alert(res.data.message);
                 window.location.reload();
             } 
-            if(res.data.message === '제출 시간이 아닙니다') {
+            if(res.data.message === '파일 업로드 실패') {
+                alert(res.data.message);
+                setProgess(0);
+            }
+            if(res.data.message === '제출시간이 아닙니다.') {
                 alert(res.data.message);
                 window.location.reload();
+                setProgess(0);
             }
             // alert(res);
         }).catch(err => console.log(err))
