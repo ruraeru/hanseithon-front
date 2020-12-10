@@ -13,6 +13,11 @@ const Btn = styled.button`
     justify-content: center;
     align-items: center;
     font-family: "KoreanJMDBR";
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(255, 0, 104, 0.79);
+        box-shadow: 3px 3px 20px rgba(255, 0, 104, 0.79);
+    }
 `;
 
 const Section = styled.section`

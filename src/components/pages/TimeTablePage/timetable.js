@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import backImg from '../../../images/background1.png';
+import TimeTableImg from '../../../images/timetable.png';
 
 const Box = styled.div`
   width: auto;
-  height: 900px;
+  height: 1500px;
   padding: 154px 305px ${props => props.img || "15px"};
   background-color: ${props => props.background || "rgba(0, 0, 0, 0.8)"};
   text-decoration: none;
@@ -42,10 +43,10 @@ function TimeTable() {
         <>
          <Back img={backImg}>
         <Box background="rgba(54, 64, 94, 0.8)">
-          <Text size="97px" line="132px" height="200px" top="-77px">
+          <Text size="97px" line="97px" height="200px" top="-77px">
             Time table
           </Text>
-          <Text height="100px" size="67px" line="67px" left="-300px">
+          {/* <Text height="100px" size="67px" line="67px" left="-300px">
             12월 11일(금) <br />
           </Text>
           <Text align="left" height="30px" left="-280px">
@@ -53,7 +54,7 @@ function TimeTable() {
             18:00 ~ 20:00 | 자율 개발 <br />
             20:00 ~ 21:00 | 저녁 식사 및 멘토단 OT <br />
             21:00 ~ 21:30 | 이벤트 타임 <br />
-            17:30 ~ 18:00 | 자율 개발 및 멘토링</p>
+            21:30 ~ 24:00 | 자율 개발 및 멘토링</p>
           </Text>
           <Text height="100px" size="67px" line="67px" left="300px" top="-132px">
             12월 12일(토) <br />
@@ -68,7 +69,8 @@ function TimeTable() {
             14:00 ~ 15:00 | 파일 제출 및 발표 준비 <br/>
             15:00 ~ 18:00 | 발표 및 심사 <br/>
             18:00 ~ 18:30 | 시상 </p>
-          </Text>
+          </Text> */}
+          <img src={TimeTableImg} width="100%"/>
           </Box>
       </Back>
         </>

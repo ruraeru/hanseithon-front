@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-// const Count = 'Dec 12, 2020 17:00:01';
-const Count = 'Dec 12, 2020 17:00:01';
+const Count = 'Dec 12, 2020 15:00:01';
 
 function Counter() {
   const calculateTimeLeft = () => {
@@ -14,7 +13,7 @@ function Counter() {
 
     if (totalSeconds > 0) {
       timeLeft = {
-        일: Math.floor(totalSeconds / 3600 / 24),
+        // 일: Math.floor(totalSeconds / 3600 / 24),
         시간: (Math.floor(totalSeconds / 3600) % 24),
         분: (Math.floor(totalSeconds / 60) % 60),
         초: (Math.floor(totalSeconds) % 60),

@@ -12,7 +12,7 @@ function FileUpload() {
     const handleChange = (e) => {
         setProgess(0)
         const file = e.target.files[0]; // accessing file
-        console.log(file);
+        // console.log(file);
         setFile(file); // storing file
     }
 
@@ -23,10 +23,22 @@ function FileUpload() {
             onUploadProgress: (ProgressEvent) => {
                 let progress = Math.round(
                     ProgressEvent.loaded / ProgressEvent.total * 100) + '%';
-                setProgess(progress);
+                    setProgess(progress);
             }
         }).then(res => {
-            console.log(res);
+            if(res.data.message === '파일을 추가해주세요') {
+                alert(res.data.message);
+                setProgess(0);
+            } 
+            if(res.data.message === '파일 업로드 성공') {
+                alert(res.data.message);
+                window.location.reload();
+            } 
+            if(res.data.message === '제출 시간이 아닙니다') {
+                alert(res.data.message);
+                window.location.reload();
+            }
+            // alert(res);
         }).catch(err => console.log(err))
     }
     return (
