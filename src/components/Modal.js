@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import Upload from './pages/UploadPage/fileupload';
 
 const Btn = styled.button`
-    width: 1000px;
-    height: 100px;
+    width: 719px;
+    height: 95px;
     border-radius: 10rem;
     border-color: #262626;
     font-size: 67px;
