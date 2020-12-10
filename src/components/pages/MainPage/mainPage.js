@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import backImg from '../../../images/background1.png';
+import Guide from '../../../videos/guidevideo.mp4';
 
 const Box = styled.div`
   width: auto;
@@ -44,6 +45,15 @@ const Iframe = styled.iframe`
   justify-content: center;
 `;
 
+const Video = styled.video`
+  width: 100%;
+  height: 525px;
+  display: flex;
+  justify-content: center;
+  background: black;
+  border: none;
+`;
+
 function MainPage() {
   return (
     <>
@@ -54,11 +64,11 @@ function MainPage() {
       </Text>
           <Text size="92px" height="0" line="125px" top="-347px" left="10px">
             Welcome <br /> To Hanseithon
-      </Text>
+      </Text> 
           <Text top="-60px">
             ㅡ The Third Session of 2020 ㅡ
       </Text>
-          <Iframe src="https://www.youtube-nocookie.com/embed/RYR6LeEK1hU?autoplay=1&mute=1" frameBorder="0" controlslist="nodownload" loop="1" allowFullScreen />
+          <Iframe src="https://www.youtube-nocookie.com/embed/_uBRNsHxIFk?autoplay=1&loop=1&autopause=0&mute=1" frameBorder="0" allow="autoplay" allowFullScreen/>
         </Box>
       </Back>
     </>

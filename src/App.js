@@ -68,6 +68,7 @@ const Time = styled.text`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 `;
 
 function App() {
