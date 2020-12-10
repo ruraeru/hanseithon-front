@@ -46,7 +46,7 @@ function Counter() {
   });
   return (
     <div>
-      {timerComponents.length ? timerComponents : <span>제안 시간이 초과되었습니다!!!</span>}
+      {timerComponents.length ? timerComponents : <span>제한 시간이 초과되었습니다!!!</span>}
     </div>
   );
 }
