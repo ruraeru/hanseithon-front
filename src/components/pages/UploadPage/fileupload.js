@@ -38,7 +38,7 @@ function FileUpload() {
                 alert(res.data.message);
                 setProgess(0);
             }
-            if(res.data.message === '제출시간이 아닙니다.') {
+            if(res.data.message === '제출시간이 아닙니다') {
                 alert(res.data.message);
                 window.location.reload();
                 setProgess(0);
