@@ -61,8 +61,8 @@ const Time = styled.text`
   height: 100%;
   text-shadow: 3px 3px 20px rgba(255, 255, 255, 0.8);
   font-family:"KoreanJMDBR";
-  font-size: 154px;
-  line-height: 154px;
+  font-size: 150px;
+  line-height: 150px;
   color: #ffffff;
   display: flex;
   flex-direction: column;
