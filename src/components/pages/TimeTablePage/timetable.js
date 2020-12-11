@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import backImg from '../../../images/background1.png';
-import TimeTableImg from '../../../images/timetable.png';
+import TimeTableImg from '../../../images/timetable.jpeg';
 
 const Box = styled.div`
   width: auto;
-  height: 1500px;
+  height: 800px;
   padding: 154px 305px ${props => props.img || "15px"};
   background-color: ${props => props.background || "rgba(0, 0, 0, 0.8)"};
   text-decoration: none;
