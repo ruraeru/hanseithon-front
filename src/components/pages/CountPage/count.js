@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Count = 'Dec 12, 2020 15:00:01';
+const Count = 'Dec 12, 2020 16:00:01';
 
 function Counter() {
   const calculateTimeLeft = () => {
