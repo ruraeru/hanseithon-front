@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Modal from 'react-awesome-modal';
 import styled from 'styled-components';
-import Upload from './pages/UploadPage/fileupload';
+import Upload from './UploadPage/fileupload';
 
 const Btn = styled.button`
     width: 719px;
@@ -29,19 +29,19 @@ export default class Examples extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            visible : false
+            visible: false
         }
     }
 
     openModal() {
         this.setState({
-            visible : true
+            visible: true
         });
     }
 
     closeModal() {
         this.setState({
-            visible : false
+            visible: false
         });
     }
 

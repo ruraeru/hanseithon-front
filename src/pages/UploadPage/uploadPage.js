@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import backImg from '../../../images/background1.png';
-import Guide from '../../../videos/guidevideo.mp4';
+import backImg from '../../images/background1.png';
+import Upload from './fileupload';
+import Modal from '../Modal';
 
 const Box = styled.div`
   width: auto;
@@ -19,7 +20,6 @@ const Back = styled.div`
 
 const Text = styled.text`
   font-family: "KoreanJMDBR";
-  src: url("./fonts/KoreanJMDBR.ttf") format("ttf");
   font-size: ${props => props.size || "25px"};
 
   color: black;
@@ -35,44 +35,25 @@ const Text = styled.text`
   display: flex;
   justify-content: center;
   text-align: ${props => props.align || "center"};
-  position: ${props => props.position || "relative"};
 `;
 
-const Iframe = styled.iframe`
-  width: 100%;
-  height: 525px;
-  display: flex;
-  justify-content: center;
-`;
-
-const Video = styled.video`
-  width: 100%;
-  height: 525px;
-  display: flex;
-  justify-content: center;
-  background: black;
-  border: none;
-`;
-
-function MainPage() {
+function FileUpload() {
   return (
     <>
       <Back img={backImg}>
-        <Box>
-          <Text size="92px" height="217px" line="125px" color="#d15941" top="-130px">
-            Welcome <br /> To Hanseithon
-      </Text>
-          <Text size="92px" height="0" line="125px" top="-347px" left="10px">
-            Welcome <br /> To Hanseithon
-      </Text> 
-          <Text top="-60px">
-            ㅡ The Third Session of 2020 ㅡ
-      </Text>
-          <Iframe src="https://www.youtube-nocookie.com/embed/_uBRNsHxIFk?autoplay=1&loop=1&autopause=0&mute=1" frameBorder="0" allow="autoplay" allowFullScreen/>
+        <Box background="rgba(255, 255, 255, 0.8)">
+          <Text size="97px" color="#262626" line="97px">
+            file
+          </Text>
+          <br /><br /><br /><br /><br /><br /><br /><br /><br />
+          <br /><br /><br /><br /><br /><br /><br /><br /><br />
+          <Text>
+            <Modal />
+          </Text>
         </Box>
       </Back>
     </>
   )
 }
 
-export default MainPage;
+export default FileUpload;

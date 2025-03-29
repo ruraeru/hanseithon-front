@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import backImg2 from './images/background3.png';
-import Count from './components/pages/CountPage/count';
-import MainPage from './components/pages/MainPage/mainPage';
-import TimeTable from './components/pages/TimeTablePage/timetable';
-import Upload from './components/pages/UploadPage/uploadPage';
-
-
+import MainPage from './pages/MainPage/mainPage';
+import Count from './pages/CountPage/count';
+import TimeTable from './pages/TimeTablePage/timetable';
+import Upload from './pages/UploadPage/uploadPage';
 
 const Back = styled.div`
   background-image: url(${props => props.img || "none"});
@@ -87,7 +85,7 @@ function App() {
             <Count />
           </Time>
         </Box>
-      </Back>
+      </Back >
       <TimeTable />
       <Upload />
     </>

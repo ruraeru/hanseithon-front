@@ -23,22 +23,22 @@ function FileUpload() {
             onUploadProgress: (ProgressEvent) => {
                 let progress = Math.round(
                     ProgressEvent.loaded / ProgressEvent.total * 100) + '%';
-                    setProgess(progress);
+                setProgess(progress);
             }
         }).then(res => {
-            if(res.data.message === '파일을 추가해주세요') {
-                alert(res.data.message);
-                setProgess(0);
-            } 
-            if(res.data.message === '파일 업로드 성공') {
-                alert(res.data.message);
-                window.location.reload();
-            } 
-            if(res.data.message === '파일 업로드 실패') {
+            if (res.data.message === '파일을 추가해주세요') {
                 alert(res.data.message);
                 setProgess(0);
             }
-            if(res.data.message === '제출시간이 아닙니다') {
+            if (res.data.message === '파일 업로드 성공') {
+                alert(res.data.message);
+                window.location.reload();
+            }
+            if (res.data.message === '파일 업로드 실패') {
+                alert(res.data.message);
+                setProgess(0);
+            }
+            if (res.data.message === '제출시간이 아닙니다') {
                 alert(res.data.message);
                 window.location.reload();
                 setProgess(0);

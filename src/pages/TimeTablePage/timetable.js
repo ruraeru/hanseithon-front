@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import backImg from '../../../images/background1.png';
-import TimeTableImg from '../../../images/timetable.jpeg';
+import backImg from '../../images/background1.png';
+import TimeTableImg from '../../images/timetable.jpeg';
 
 const Box = styled.div`
   width: auto;
@@ -39,9 +39,9 @@ const Text = styled.text`
 `;
 
 function TimeTable() {
-    return (
-        <>
-         <Back img={backImg}>
+  return (
+    <>
+      <Back img={backImg}>
         <Box background="rgba(54, 64, 94, 0.8)">
           <Text size="97px" line="97px" height="200px" top="-77px">
             Time table
@@ -70,11 +70,11 @@ function TimeTable() {
             15:00 ~ 18:00 | 발표 및 심사 <br/>
             18:00 ~ 18:30 | 시상 </p>
           </Text> */}
-          <img src={TimeTableImg} width="100%"/>
-          </Box>
+          <img src={TimeTableImg} width="100%" />
+        </Box>
       </Back>
-        </>
-    )
+    </>
+  )
 }
 
 export default TimeTable;
